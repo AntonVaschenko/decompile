@@ -1,9 +1,15 @@
+package dl;
+
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 public class TitlesFrame extends JFrame {
 
+
+   /**
+    * Constructor for class TitlesFrame.
+    */
    public TitlesFrame() {
       this.initUI();
    }
@@ -16,6 +22,9 @@ public class TitlesFrame extends JFrame {
       this.setLocationRelativeTo((Component)null);
    }
 
+   /**
+    *  Main method. Entry point in the program.
+    */
    public static void main(String[] args) {
       SwingUtilities.invokeLater(new Runnable() {
          public void run() {

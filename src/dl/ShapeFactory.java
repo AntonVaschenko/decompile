@@ -1,3 +1,5 @@
+package dl;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -7,6 +9,9 @@ import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D.Double;
 
+/**
+ *  Class ShapeFactory describe structure of shape and create shape.
+ */
 public class ShapeFactory {
 
    public Shape shape;
@@ -16,6 +21,9 @@ public class ShapeFactory {
    public int height = 25;
 
 
+   /**
+    * Create object shapeFactory.
+    */
    public ShapeFactory(int shape_type) {
       switch(shape_type / 10) {
       case 1:

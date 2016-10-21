@@ -1,3 +1,5 @@
+package dl;
+
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,6 +11,10 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+
+/**
+ *  Class TitlesPanel extend parent clsas JPanel and realize interface ActionListener.
+ */
 public class TitlesPanel extends JPanel implements ActionListener {
 
    private Graphics2D g2d;
@@ -18,6 +24,9 @@ public class TitlesPanel extends JPanel implements ActionListener {
    private int shape;
 
 
+   /**
+    *  Constructor for creating object.
+    */
    public TitlesPanel(int _shape) {
       this.shape = _shape;
       this.animation = new Timer(50, this);
@@ -25,6 +34,7 @@ public class TitlesPanel extends JPanel implements ActionListener {
       this.animation.start();
    }
 
+   @Override
    public void actionPerformed(ActionEvent arg0) {
       if(this.is_done) {
          this.repaint();
@@ -63,6 +73,7 @@ public class TitlesPanel extends JPanel implements ActionListener {
       this.is_done = true;
    }
 
+   @Override
    public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.doDrawing(g);
